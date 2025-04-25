@@ -32,3 +32,8 @@ a:hover {
     color: #fff;
     text-shadow: var(--neon-shadow);
 }
+
+.neonTurnedOffText {
+    color: rgba(166, 0, 255, 0.2);
+    -webkit-text-stroke: 1px #484052;
+}

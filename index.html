@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Arthur Shiroshima</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
         <div class="logo">
-            <h1 class="neonText">白島</h1>
+            <h1 id="logo-text" class="neonTurnedOffText">白島</h1>
+        </div>
+
+        <div class="logo-switch">
+            <button id="logo-switch-button" class="neonTurnedOffText">ON</button>
         </div>
 
         <nav>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#portfolio">Portfólio</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#contato">Contato</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
 
@@ -41,6 +45,22 @@
                 <a href="curriculum.pdf" class="btn" download>Baixar currículo</a>
             </div>
         </section>
+    </main>
 
-  </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoText = document.getElementById('logo-text');
+            const logoSwitchButton = document.getElementById('logo-switch-button');
+
+            logoSwitchButton.addEventListener('click', function () {
+                logoText.classList.toggle('neonTurnedOffText');
+                logoText.classList.toggle('neonText');
+
+                logoSwitchButton.textContent = logoText.classList.contains('neonText') ? 'OFF' : 'ON';
+            });
+        });
+    </script>
+
+</body>
+
 </html>
