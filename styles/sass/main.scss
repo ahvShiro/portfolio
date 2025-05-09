@@ -1,0 +1,129 @@
+// Mixins
+@mixin neon-text($color1, $color2, $color3) {
+    color: #fff;
+    text-shadow:
+        /* White glow */
+        0 0 3.5px #fff,
+        0 0 10px #fff,
+        /* Purple glow */
+        0 0 42px $color1,
+        0 0 82px $color2,
+        0 0 92px $color2,
+        0 0 102px $color1,
+        0 0 151px $color3;
+}
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+// Base styles
+body {
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+// Links
+a {
+    color: rgb(0, 255, 255);
+
+    &:hover {
+        color: #fff;
+        text-shadow: 0 0 3.5px #fff,
+            0 0 10px #fff,
+            0 0 40px #fff;
+        ;
+    }
+
+    &:visited {
+        color: rgb(255, 72, 176);
+        text-shadow: 0 0 3.5px #fff,
+            0 0 10px #fff,
+            0 0 40px #fff;
+
+        &:hover {
+            color: #fff;
+            text-shadow: 0 0 3.5px #fff,
+                0 0 10px #fff,
+                0 0 40px #fff;
+        }
+    }
+}
+
+// Header
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #242424;
+
+    .logo {
+        h1 {
+            font-size: 2rem;
+            color: #fff;
+        }
+    }
+}
+
+// Navigation
+.nav-items {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin: 0 15px;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            // TODO flicker effect
+        }
+    }
+}
+
+// Neon text effects
+.neon-text {
+    @include neon-text(rgb(166, 0, 255), rgb(255, 72, 176), rgb(166, 0, 255));
+}
+
+// Commented out code preserved
+/* .neonTurnedOffText {
+  color: rgba(166, 0, 255, 0.2);
+  -webkit-text-stroke: 1px #484052;
+} */
+
+// Hero Section
+#hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+        @include neon-text(rgb(166, 0, 255), rgb(255, 72, 176), rgb(166, 0, 255));
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .cta {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
