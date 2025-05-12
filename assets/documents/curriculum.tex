@@ -4,10 +4,10 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
+    top=1 cm, % seperation between body and page edge from the top
     bottom=2 cm, % seperation between body and page edge from the bottom
-    left=2 cm, % seperation between body and page edge from the left
-    right=2 cm, % seperation between body and page edge from the right
+    left=1 cm, % seperation between body and page edge from the left
+    right=1 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
     % showframe % for debugging 
 ]{geometry} % for adjusting page geometry
@@ -59,13 +59,13 @@
 \setlength{\parindent}{0pt} % no indentation
 \setlength{\topskip}{0pt} % no top skip
 \setlength{\columnsep}{0cm} % set column seperation
-\makeatletter
-\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
-\patchcmd{\ps@customFooterStyle}{\thepage}{
-    \color{gray}\textit{\small Arthur Shiroshima - Página \thepage{} de \pageref*{LastPage}}
-}{}{} % replace number by desired string
-\makeatother
-\pagestyle{customFooterStyle}
+% \makeatletter
+% \let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+% \patchcmd{\ps@customFooterStyle}{\thepage}{
+%     \color{gray}\textit{\small Arthur Shiroshima - Página \thepage{} de \pageref*{LastPage}}
+% }{}{} % replace number by desired string
+% \makeatother
+% \pagestyle{customFooterStyle}
 
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
@@ -154,7 +154,7 @@
     \begin{header}
         \textbf{\fontsize{24 pt}{24 pt}\selectfont Arthur Heiji Voos Shiroshima}
 
-        \vspace{0.3 cm}
+        \vspace{0.2 cm}
 
         \normalsize
         \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Paranavaí - PR}%
@@ -173,8 +173,6 @@
         \kern 0.25 cm%
         \mbox{{\color{black}\footnotesize\faGithub}\hspace*{0.13cm}\hrefWithoutArrow{https://github.com/ahvshiro}{\textcolor{primaryColor}{\ul{ahvShiro}}}}%
     \end{header}
-
-    \vspace{0.3 cm - 0.3 cm}
 
 
     \section{Objetivo}
@@ -204,7 +202,7 @@
     
     \section{Experiência}
 
-        % % UOL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % % UOL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % \begin{twocolentry}{
         % \textit{Home Office}    
             
@@ -221,11 +219,11 @@
         %         \item To come...
         %     \end{highlights}
         % \end{onecolentry}
-        % % UOL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % % UOL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         
-        \vspace{0.2 cm}
+        % \vspace{0.2 cm}
 
-        % SESAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % SESAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \begin{twocolentry}{
         \textit{Paranavaí, PR}    
             
@@ -239,17 +237,17 @@
         
         \begin{onecolentry}
             \begin{highlights}
-                \item Prestei suporte técnico presencial e remoto para a resolução de problemas de software e hardware em todas as unidades de saúde.
-                \item Realizei a manutenção de computadores, incluindo troca de peças e formatação do sistema operacional.
-                \item Colaborei na instalação de dispositivos de rede, como switches e cabeamento estruturado, durante a reforma da Unidade de Pronto Atendimento (UPA).
+                \item Atendi de 20 a 25 chamados semanais via telefone e TightVNC, solucionando problemas de conectividade, hardware e sistema.
+                \item Realizei suporte de hardware, software e redes presencial em unidades de saúde, com autonomia para diagnosticar falhas e aplicar correções imediatas.
+                \item Participei da migração da UPA durante sua renovação, mapeando ramais da nova estrutura e auxiliando na instalação de dispositivos de rede como switches e pontos de acesso wireless.
+                \item Desenvolvi habilidades de atendimento técnico, priorização de tarefas e comunicação com diferentes perfis de usuários.
             \end{highlights}
         \end{onecolentry}
-        % SESAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % SESAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
     \section{Educação}
-
 
         \begin{twocolentry}{
                         
@@ -257,6 +255,7 @@
             \textbf{Instituto Federal do Paraná} - Campus Paranavaí
 
             \textit{Bacharelado em Engenharia de Software}
+            
         \end{twocolentry}
     
     % \section{Projetos}
@@ -296,28 +295,12 @@
     \section{Habilidades}
 
         \begin{onecolentry}
-            \textbf{Linguagens:} Java, Python, PHP, JavaScript, C
-
-        \end{onecolentry}
-        
-        \vspace{0.1 cm}
-        \begin{onecolentry}
-            \textbf{Frameworks \& Runtimes:} Node.js, React Native, Expo
-        \end{onecolentry}
-        
-        \vspace{0.1 cm}
-        \begin{onecolentry}
-            \textbf{BD:} PostgreSQL, SQLite, MariaDB, MongoDB
-        \end{onecolentry}
-        
-        \vspace{0.1cm}
-        \begin{onecolentry}
-            \textbf{Ferramentas:} Git, Docker, Apache, Postman
+            Java, Python, PHP, JavaScript, C\textbf{ | } Node.js, React Native, Expo\textbf{ | } PostgreSQL, SQLite, MariaDB, MongoDB\textbf{ | } Git, Docker, Apache, Postman
         \end{onecolentry}
     
     \section{Certificações}
 
-        % CERTIPROF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % CERTIPROF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \begin{twocolentry}{        
         \textit{\href{https://drive.google.com/file/d/1clGQ68hbqWuvYoqf4kLtjp3EavD6oUl_/view}{Certiprof}}}
             \textbf{Scrum Foundation Professional Certificate (SFPC™)}
@@ -330,11 +313,11 @@
                 \item Fundamentos da metodologia Scrum segundo o \textit{Scrum Guide™ – The Definitive Guide to Scrum: The Rules of the Game}, por Ken Schwaber and Jeff Sutherland
             \end{highlights}
         \end{onecolentry}
-        % CERTIPROF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % CERTIPROF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
         \vspace{0.2 cm}
 
-        % INGLES INTERMEDIARIO II %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % INGLES INTERMEDIARIO II %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \begin{twocolentry}{            
         \textit{\href{https://drive.google.com/file/d/18BuqR67oopjdiHe33fjyTVAAJt3ZBsEi/view?usp=sharing}{CELIF - IFPR}}}
             \textbf{Curso de Inglês Intermediário II}
@@ -347,11 +330,11 @@
                 \item Desenvolvimento das habilidades de leitura, escrita, fala e compreensão, por meio de atividades escritas, conversações e avaliações orais e escritas
             \end{highlights}
         \end{onecolentry}
-        % INGLES INTERMEDIARIO II %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % INGLES INTERMEDIARIO II %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
         \vspace{0.2 cm}
 
-        % GIT WORKFLOW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % GIT WORKFLOW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \begin{twocolentry}{            
         \textit{\href{https://www.upinside.com.br/certificados/6734048202410}{Upinside Treinamentos}}}
             \textbf{Git Workflow}
@@ -363,11 +346,11 @@
                 \item Versionamento de projetos, repositórios no Github, trabalhando com git diff, branches e tags, trabalhando com IDE produtiva.
             \end{highlights}
         \end{onecolentry}
-        % GIT WORKFLOW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % GIT WORKFLOW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
         \vspace{0.2 cm}
 
-        % AMBIENTE LOCAL COM DOCKER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % AMBIENTE LOCAL COM DOCKER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \begin{twocolentry}{            
         \textit{\href{https://www.upinside.com.br/certificados/6734070202412}{Upinside Treinamentos}}}
             \textbf{Ambiente Local com Docker}
@@ -379,7 +362,7 @@
                 \item Instalação do Docker, criação e gestão de containers, imagens e volumes, incluindo automação com Dockerfile e docker-compose.
             \end{highlights}
         \end{onecolentry}
-        % AMBIENTE LOCAL COM DOCKER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % AMBIENTE LOCAL COM DOCKER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         
     \section{Idiomas}
 
