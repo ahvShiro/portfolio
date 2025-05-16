@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto Mono", monospace, sans-serif;
 }
 
 body {
@@ -14,16 +16,15 @@ a {
   color: rgb(0, 255, 255);
 }
 a:hover {
-  color: #fff;
-  text-shadow: 0 0 3.5px #fff, 0 0 10px #fff, 0 0 40px #fff;
+  color: rgb(0, 255, 255);
+  text-shadow: 0 0 10px, 0 0 20px, 0 0 40px, 0 0 80px;
 }
 a:visited {
   color: rgb(255, 72, 176);
-  text-shadow: 0 0 3.5px #fff, 0 0 10px #fff, 0 0 40px #fff;
 }
 a:visited:hover {
-  color: #fff;
-  text-shadow: 0 0 3.5px #fff, 0 0 10px #fff, 0 0 40px #fff;
+  color: rgb(255, 72, 176);
+  text-shadow: 0 0 10px, 0 0 20px, 0 0 40px, 0 0 80px;
 }
 
 header {
@@ -34,7 +35,9 @@ header {
   background-color: #242424;
 }
 header .logo h1 {
-  font-size: 2rem;
+  font-family: "M PLUS 1 Code", monospace, sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
   color: #fff;
 }
 
@@ -55,7 +58,7 @@ header .logo h1 {
 
 .neon-text {
   color: #fff;
-  text-shadow: 0 0 3.5px #fff, 0 0 10px #fff, 0 0 42px rgb(166, 0, 255), 0 0 82px rgb(255, 72, 176), 0 0 92px rgb(255, 72, 176), 0 0 102px rgb(166, 0, 255), 0 0 151px rgb(166, 0, 255);
+  text-shadow: 0 0 10px violet, 0 0 20px deeppink, 0 0 40px magenta, 0 0 80px fuchsia;
 }
 
 /* .neonTurnedOffText {
@@ -72,10 +75,11 @@ header .logo h1 {
   padding: 0 2rem;
 }
 #hero h1 {
+  font-family: "Roboto Mono", monospace, sans-serif;
   font-size: 4rem;
   margin-bottom: 0.5rem;
   color: #fff;
-  text-shadow: 0 0 3.5px #fff, 0 0 10px #fff, 0 0 42px rgb(166, 0, 255), 0 0 82px rgb(255, 72, 176), 0 0 92px rgb(255, 72, 176), 0 0 102px rgb(166, 0, 255), 0 0 151px rgb(166, 0, 255);
+  text-shadow: 0 0 10px violet, 0 0 20px deeppink, 0 0 40px magenta, 0 0 80px fuchsia;
 }
 #hero h2 {
   font-size: 1.8rem;

@@ -1,0 +1,175 @@
+classDiagram
+    class Usuario {
+        -int id
+        -String nome
+        -String cpf
+        -String senha
+        -String email
+        +autenticar()
+    }
+    
+    class Aluno {
+        -String curso
+        -String turma
+        +solicitarEmprestimo()
+        +registrarItemPerdido()
+        +solicitarRenovacao()
+        +solicitarEmprestimoRemoto()
+    }
+    
+    class Assistente {
+        +gerenciarContas()
+        +cadastrarItem()
+        +registrarEmprestimo()
+        +registrarDevolucao()
+        +registrarItemEncontrado()
+        +vincularItemPerdidoEncontrado()
+        +gerarRelatorios()
+        +autorizarAcesso()
+        +processarDoacao()
+    }
+    
+    class Item {
+        -String id
+        -String descricao
+        -TipoItem tipo
+        -StatusItem status
+        +validarId()
+    }
+    
+    class TipoItem {
+        <<enumeration>>
+        CONSUMO_PROPRIO
+        USO_IMEDIATO
+        LONGO_EMPRESTIMO
+        CHAVE
+    }
+    
+    class StatusItem {
+        <<enumeration>>
+        DISPONIVEL
+        EMPRESTADO
+        EXTRAVIADO
+        DANIFICADO
+    }
+    
+    class Emprestimo {
+        -int id
+        -Date dataEmprestimo
+        -Date dataPrevistaDevolucao
+        -Date dataDevolucao
+        -String observacoes
+        -StatusEmprestimo status
+        +calcularPrazo()
+        +verificarAtraso()
+        +renovar()
+    }
+    
+    class StatusEmprestimo {
+        <<enumeration>>
+        ATIVO
+        DEVOLVIDO
+        ATRASADO
+        RENOVADO
+        EXTRAVIADO
+        DANIFICADO
+    }
+    
+    class ItemPerdido {
+        -int id
+        -String descricao
+        -String local
+        -Date dataRegistro
+        -StatusItemPerdido status
+    }
+    
+    class ItemEncontrado {
+        -int id
+        -String descricao
+        -String local
+        -Date dataRegistro
+        -StatusItemEncontrado status
+    }
+    
+    class StatusItemPerdido {
+        <<enumeration>>
+        REGISTRADO
+        VINCULADO
+        RECUPERADO
+    }
+    
+    class StatusItemEncontrado {
+        <<enumeration>>
+        REGISTRADO
+        VINCULADO
+        DEVOLVIDO
+        NAO_RECLAMADO
+        DOADO
+    }
+    
+    class Notificacao {
+        -int id
+        -String titulo
+        -String conteudo
+        -Date dataEnvio
+        -TipoNotificacao tipo
+        +enviar()
+    }
+    
+    class TipoNotificacao {
+        <<enumeration>>
+        ATRASO
+        VINCULO_ITEM
+        CONFIRMACAO_RENOVACAO
+    }
+    
+    class Relatorio {
+        -int id
+        -String titulo
+        -Date dataGeracao
+        -TipoRelatorio tipo
+        -FormatoRelatorio formato
+        +gerar()
+        +exportar()
+    }
+    
+    class TipoRelatorio {
+        <<enumeration>>
+        EMPRESTIMOS_ATRASADOS
+        ITENS_MAIS_SOLICITADOS
+        ACHADOS_PERDIDOS
+    }
+    
+    class FormatoRelatorio {
+        <<enumeration>>
+        PDF
+        CSV
+    }
+    
+    class AutorizacaoChave {
+        -int id
+        -String localAcesso
+        -Date dataAutorizacao
+        -Date validade
+        +validarPermissao()
+    }
+    
+    Usuario <|-- Aluno
+    Usuario <|-- Assistente
+    
+    Aluno "1" -- "0..*" Emprestimo : solicita
+    Aluno "1" -- "0..*" ItemPerdido : registra
+    Assistente "1" -- "0..*" ItemEncontrado : registra
+    Assistente "1" -- "0..*" Item : cadastra
+    
+    Emprestimo "0..*" -- "1..*" Item : inclui
+    Emprestimo "0..*" -- "1" Assistente : gerencia
+    
+    ItemPerdido "0..1" -- "0..1" ItemEncontrado : vinculado a
+    
+    Notificacao "0..*" -- "1" Usuario : destinada a
+    
+    Assistente "1" -- "0..*" Relatorio : gera
+    
+    Aluno "1" -- "0..*" AutorizacaoChave : possui
+    AutorizacaoChave "0..*" -- "1..*" Item : permite acesso a
