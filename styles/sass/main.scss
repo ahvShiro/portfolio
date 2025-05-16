@@ -49,6 +49,12 @@ a {
     }
 }
 
+// Neon text effects
+.neon-text {
+    @include neon-text(#fff, violet, deeppink, magenta, fuchsia);
+}
+
+
 // Header
 header {
     display: flex;
@@ -56,6 +62,9 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: #242424;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
 
     .logo {
         h1 {
@@ -82,17 +91,16 @@ header {
             font-size: 1.2rem;
             padding: 5px 10px;
             border-radius: 5px;
-            // TODO flicker effect
+
+            &:hover {
+                @include neon-text(#fff, #fff, #fff, #fff, #fff);
+            }
         }
     }
 }
 
-// Neon text effects
-.neon-text {
-    @include neon-text(#fff, violet, deeppink, magenta, fuchsia);
-}
 
-// Commented out code preserved
+
 /* .neonTurnedOffText {
   color: rgba(166, 0, 255, 0.2);
   -webkit-text-stroke: 1px #484052;
@@ -112,7 +120,6 @@ header {
         font-family: $roboto-mono;
         font-size: 4rem;
         margin-bottom: 0.5rem;
-        @include neon-text(#fff, violet, deeppink, magenta, fuchsia);
     }
 
     h2 {

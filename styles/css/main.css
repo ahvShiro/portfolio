@@ -27,12 +27,20 @@ a:visited:hover {
   text-shadow: 0 0 10px, 0 0 20px, 0 0 40px, 0 0 80px;
 }
 
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 10px violet, 0 0 20px deeppink, 0 0 40px magenta, 0 0 80px fuchsia;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #242424;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
 }
 header .logo h1 {
   font-family: "M PLUS 1 Code", monospace, sans-serif;
@@ -55,10 +63,9 @@ header .logo h1 {
   padding: 5px 10px;
   border-radius: 5px;
 }
-
-.neon-text {
+.nav-items li a:hover {
   color: #fff;
-  text-shadow: 0 0 10px violet, 0 0 20px deeppink, 0 0 40px magenta, 0 0 80px fuchsia;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
 }
 
 /* .neonTurnedOffText {
@@ -78,8 +85,6 @@ header .logo h1 {
   font-family: "Roboto Mono", monospace, sans-serif;
   font-size: 4rem;
   margin-bottom: 0.5rem;
-  color: #fff;
-  text-shadow: 0 0 10px violet, 0 0 20px deeppink, 0 0 40px magenta, 0 0 80px fuchsia;
 }
 #hero h2 {
   font-size: 1.8rem;
