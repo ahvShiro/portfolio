@@ -1,0 +1,10 @@
+body {
+  background-color: beige;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+nav a {
+  color: darkorange;
+}
+.header {
+  color: rgb(30, 30, 30);
+}
