@@ -1,10 +1,35 @@
+:root {
+    --paragraph-color: #000c3c;
+    --background-color: #f5fbff;
+    --paragraph-font: "Chivo Mono", monospace;
+    --bold-font: ""
+}
+
+* {
+  color: var(--paragraph-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#home {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    min-height: 60vh;
+}
+
 body {
-  background-color: beige;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: var(--background-color);
+  font-family: var(--paragraph-font);
 }
-nav a {
-  color: darkorange;
-}
-.header {
-  color: rgb(30, 30, 30);
+
+nav {
+  text-align: right;
 }
