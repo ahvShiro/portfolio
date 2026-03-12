@@ -9,6 +9,15 @@
   color: var(--paragraph-color);
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    margin: 10px 25px 10px 25px;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr; 
