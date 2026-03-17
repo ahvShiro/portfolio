@@ -1,60 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
     --paragraph-color: #000c3c;
-    --background-color: #f5fbff;
+    --background-color: #fffcf5;
     --paragraph-font: "Chivo Mono", monospace;
-    --bold-font: ""
+    --bold-font: "";
 }
 
 * {
-  color: var(--paragraph-color);
+    box-sizing: border-box;
+    color: var(--paragraph-color);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: var(--paragraph-font);
 }
 
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 10px 25px 10px 25px;
+    gap: 1rem;
+    margin: 10px 25px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem 1rem;
+    text-align: right;
 }
 
 main {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 4rem;
-    padding: 2rem;
+    padding: clamp(1rem, 3vw, 2rem);
     max-width: 1200px;
     margin: 0 auto;
 }
 
+section {
+    width: 100%;
+}
+
 #home {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 1rem;
     min-height: 60vh;
 }
 
-body {
-  background-color: var(--background-color);
-  font-family: var(--paragraph-font);
+.hero-photo {
+    display: flex;
+    justify-content: flex-end;
+    padding-inline: clamp(12px, 4vw, 28px);
 }
 
-nav {
-  text-align: right;
+.hero-photo img {
+    width: min(100%, 500px);
+    height: auto;
+    display: block;
 }
 
+form {
+    width: min(100%, 560px);
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+}
+
+input[type="submit"] {
+    max-width: 100%;
+}
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
+        margin: 10px 16px;
     }
 
-    nav {
+    header nav {
         justify-content: flex-start;
         text-align: left;
+        width: 100%;
     }
 
     #home {
@@ -69,12 +107,14 @@ nav {
     main {
         gap: 2rem;
     }
+
+    .hero-photo {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
+    header nav {
         gap: 0.5rem;
     }
 
