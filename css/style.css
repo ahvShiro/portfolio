@@ -2,7 +2,9 @@
 
 :root {
     --paragraph-color: #000c3c;
-    --background-color: #fffcf5;
+    --light-paragraph-color: #626d9b;
+    --background-color: ##f5fbff;
+    --accent-color: #513cec;
     --paragraph-font: "Chivo Mono", monospace;
     --bold-font: "";
 }
