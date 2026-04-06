@@ -9,6 +9,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     color: var(--paragraph-color);
 }
 
@@ -57,6 +59,10 @@ section {
     min-height: 60vh;
 }
 
+p {
+    margin-top: 12px;
+}
+
 .hero-photo {
     display: flex;
     justify-content: flex-end;
@@ -67,6 +73,65 @@ section {
     width: min(100%, 500px);
     height: auto;
     display: block;
+}
+
+.timeline {
+    --x-linha: 12px; 
+    --largura-linha: 2px;
+    --tamanho-ponto: 18px;
+
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 1.25rem 0 0 0;
+    display: grid;
+    gap: 1.5rem;
+}
+
+
+.timeline em {
+    color: var(--light-paragraph-color);
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    bottom: 0;
+    left: var(--x-linha);
+    width: var(--largura-linha);
+    transform: translateX(-50%);
+    background: var(--paragraph-color);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: var(--x-linha);
+    top: 50%;
+    transform: translateX(-50%);
+
+    width: var(--tamanho-ponto);
+    height: var(--tamanho-ponto);
+    border-radius: 50%;
+    background: var(--accent-color);
+}
+
+.timeline h1 {
+    font-size: 22px;
+}
+
+.timeline-card {
+    background: #fff;
+    border: 1px solid #aaa;
+    padding: 1.25rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
 }
 
 form {
