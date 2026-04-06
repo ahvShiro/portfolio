@@ -2,7 +2,7 @@
 
 :root {
     --paragraph-color: #000c3c;
-    --light-paragraph-color: #626d9b;
+    --light-paragraph-color: #444e79;
     --background-color: ##f5fbff;
     --accent-color: #513cec;
     --paragraph-font: "Chivo Mono", monospace;
@@ -13,6 +13,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+p {
+    margin-top: 12px;
+    color: var(--light-paragraph-color);
+}
+
+h1 h2 h3 h4 {
     color: var(--paragraph-color);
 }
 
@@ -40,6 +48,10 @@ header nav {
     text-align: right;
 }
 
+header nav a {
+    color: var(--paragraph-color)
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -61,9 +73,6 @@ section {
     min-height: 60vh;
 }
 
-p {
-    margin-top: 12px;
-}
 
 .hero-photo {
     display: flex;
@@ -91,7 +100,12 @@ p {
 }
 
 
-.timeline em {
+.timeline .internal-list {
+    margin: 1rem;
+    list-style: disc;
+}
+
+.timeline .internal-list li {
     color: var(--light-paragraph-color);
 }
 
