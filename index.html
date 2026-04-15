@@ -253,25 +253,48 @@
 
         <section id="contact">
             <h1>Entre em contato</h1>
+            <section id="contact-methods">
+                <div class="contact-info">
+                    
             <p>
-                @ahvShiro, arthurshiro123@gmail.com etc.
+                        arthurshiro123@gmail.com
             </p>
 
+                    <p>
+                        +55 (44) 99918-7250
+                    </p>
+                </div>
+
+                <div class="contact-form">
             <form action="https://formspree.io/f/xjgpdbbp" method="POST">
-                <label>
+                        
+
+                        <div class="form-item">
+                            <label for="name">
                     Nome:
-                    <input type="text" name="name">
                 </label>
-                <label>
+                            <input type="text" name="name" class="field">
+                        </div>
+
+                        <div class="form-item">
+                            <label for="email">
                     Seu melhor email:
-                    <input type="email" name="email">
                 </label>
-                <label>
+                            <input type="email" name="email" class="field">
+                        </div>
+
+                        <div class="form-item">
+                            <label for="message">
                     Mensagem:
-                    <textarea name="message"></textarea>
                 </label>
-                <button type="submit">Enviar</button>
+                            <textarea name="message" class="field"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="send-form-button">Enviar</button>
                 </form>
+                </div>
+            </section>
+
         </section>
 
     </main>
