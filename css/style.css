@@ -3,7 +3,7 @@
 :root {
     --paragraph-color: #000c3c;
     --light-paragraph-color: #444e79;
-    --background-color: ##f5fbff;
+    --background-color: #f5fbff;
     --accent-color: #513cec;
     --paragraph-font: "Chivo Mono", monospace;
     --bold-font: "";
@@ -77,7 +77,6 @@ section {
     gap: 1rem;
     min-height: 60vh;
 }
-
 
 .hero-photo {
     display: flex;
@@ -185,6 +184,69 @@ section {
     100% {
         transform: translateX(-100%);
     }
+}
+
+#contact-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    min-height: 60vh;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: flex-end;
+    padding-inline: clamp(12px, 4vw, 28px);
+}
+
+.contact-form .form-item {
+    display: grid;
+    grid-template-columns: auto;
+    padding-bottom: 10px;
+}
+
+.form-item .field  {
+    background-color: var(--background-color);
+    font-family: var(--paragraph-font);
+    color: var(--light-paragraph-color);
+    border-radius: 2px;
+    border: 2px solid var(--paragraph-color);
+    width:100%;
+    padding: 5px
+
+    
+}
+
+.form-item input {
+    height: 30px;
+}
+
+.form-item textarea {
+    height: 120px;
+}
+
+.form-item label {
+    color: var(--paragraph-color);
+}
+
+.send-form-button {
+    background-color: var(--background-color);
+    border: 2px solid var(--paragraph-color);
+    border-radius: 2px;
+    padding: 8px 20px;
+    font-family: var(--paragraph-font);
+    font-weight: bold;
+    color: var(--paragraph-color);
+}
+
+.send-form-button:hover {
+    cursor: pointer;
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    border: 2px solid var(--light-paragraph-color);
+    transition: all 0.3s;
+
 }
 
 form {
