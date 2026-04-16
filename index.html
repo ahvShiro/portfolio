@@ -21,7 +21,7 @@
     <header>
         <h1>Shiroshima</h1>
         <nav>
-            <a href="#about">Sobre</a>
+            <a href="#home">Sobre</a>
             <a href="#projects">Projetos</a>
             <a href="#skills">Habilidades</a>
             <a href="#professional">Experiência</a>
@@ -53,14 +53,136 @@
         <section id="projects">
             <h1>Meus projetos</h1>
 
-            <p>
-                Heiji Eventos, Jogo da Memória, Xadrez no Terminal, Design da página Argonautas, Wordle Solver, Desafio
-                Compass UOL
-            </p>
-            <!-- Seção/página de projetos:
-            - Crie uma seção para exibir os projetos mais relevantes do autor.
-            - Para cada projeto, inclua uma imagem de destaque, título, descrição breve e um link para mais detalhes. -->
+            <div class="cards-grid">
 
+                <article class="portfolio-card">
+                    <img src="images/projetos/portfolio.png" alt="Imagem deste mesmo portfólio" class="portfolio-card-image">
+
+                    <div class="portfolio-card-content">
+                        <h2>Portfólio</h2>
+
+                        <p>
+                            Portfólio pessoal contendo projetos, experiência, educação, informação de contato entre outras.
+                        </p>
+
+                        <div class="portfolio-tags" aria-label="Tecnologias usadas no projeto Jogo da Memória">
+                            <span class="portfolio-tag">HTML</span>
+                            <span class="portfolio-tag">CSS</span>
+                            <span class="portfolio-tag">JavaScript</span>
+                        </div>
+
+                        <div class="portfolio-tags">
+                            <a href="https://shiroshima.com.br" target="_blank">Acessar</a>
+                            <a href="https://github.com/ahvShiro/portfolio" target="_blank">Ver repositório</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <img src="images/projetos/heiji-eventos.png" alt="Imagem de destaque do projeto Heiji Eventos" class="portfolio-card-image">
+
+                    <div class="portfolio-card-content">
+                        <h2>Heiji Eventos</h2>
+
+                        <p>
+                            Uma API REST para gerenciamento de eventos e tickets utilizando a arquitetura de microsserviços.
+                        </p>
+
+                        <div class="portfolio-tags" aria-label="Tecnologias usadas no projeto Jogo da Memória">
+                            <span class="portfolio-tag">Java</span>
+                            <span class="portfolio-tag">Spring Boot</span>
+                            <span class="portfolio-tag">MongoDB</span>
+                            <span class="portfolio-tag">microsserviços</span>
+                            <span class="portfolio-tag">AWS</span>
+                        </div>
+
+                        <div class="portfolio-tags">
+                            <a href="https://github.com/heiji-events" target="_blank">Ver organização</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <img src="images/projetos/jogo-memoria.png" alt="Imagem de destaque do projeto Jogo da Memória" class="portfolio-card-image">
+
+                    <div class="portfolio-card-content">
+                        <h2>Jogo da Memória</h2>
+
+                        <p>
+                            Jogo web com temática de Super Mario World e integração com API de terceiros para busca de palavras e registro de pontuação.
+                        </p>
+
+                        <div class="portfolio-tags" aria-label="Tecnologias usadas no projeto Jogo da Memória">
+                            <span class="portfolio-tag">HTML</span>
+                            <span class="portfolio-tag">CSS</span>
+                            <span class="portfolio-tag">JavaScript</span>
+                        </div>
+
+                        <div class="portfolio-tags">
+                            <a href="https://jogomemoria.shiroshima.com.br" target="_blank">Jogar</a>
+                            <a href="https://github.com/ahvShiro/jogo-da-memoria" target="_blank">Ver repositório</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <img src="images/projetos/wordle-solver.png" alt="Imagem de destaque do projeto Wordle Solver" class="portfolio-card-image">
+
+                    <div class="portfolio-card-content">
+                        <h2>Wordle Solver</h2>
+
+                        <p>
+                            Ferramenta CLI para ajudar na resolução do Wordle ou Termo do dia.
+                        </p>
+
+                        <div class="portfolio-tags" aria-label="Tecnologias usadas no projeto Jogo da Memória">
+                            <span class="portfolio-tag">Python</span>
+                        </div>
+
+                        <div class="portfolio-tags">
+                            <a href="https://github.com/ahvShiro/wordle-solver" target="_blank">Ver repositório</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <img src="images/projetos/xadrez.png" alt="Imagem de destaque do projeto Xadrez no terminal" class="portfolio-card-image">
+
+                    <div class="portfolio-card-content">
+                        <h2>Xadrez no terminal</h2>
+
+                        <p>
+                            Um jogo de xadrez completo desenvolvido em Java, com todas as regras padrão e movimentos especiais, implementado com interface de console.
+                        </p>
+
+                        <div class="portfolio-tags" aria-label="Tecnologias usadas no projeto Jogo da Memória">
+                            <span class="portfolio-tag">Java</span>
+                        </div>
+
+                        <div class="portfolio-tags">
+                            <a href="https://github.com/ahvShiro/chess" target="_blank">Ver repositório</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="portfolio-card portfolio-card-cta">
+                    <div class="portfolio-card-content">
+                        <h2>Mais projetos no GitHub</h2>
+
+                        <p>
+                            Veja outros repositórios, experimentos e projetos completos publicados no meu perfil.
+                        </p>
+
+                        <a class="button" href="https://github.com/ahvShiro" target="_blank" rel="noopener noreferrer">Ir para o GitHub</a>
+                    </div>
+                </article>
+
+            </div>
 
         </section>
 
@@ -148,9 +270,7 @@
             <h1>Minha experiência</h1>
 
             <div>
-
                 <ol class="timeline">
-
                     <li class="timeline-item">
                         <article class="timeline-card">
                             <div class="card-header">
@@ -295,7 +415,6 @@
                     </li>
                 </ol>
             </div>
-
 
         </section>
 
