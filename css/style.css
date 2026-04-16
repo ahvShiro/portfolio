@@ -276,17 +276,10 @@ section {
 
 }
 
-form {
-    width: min(100%, 560px);
-}
-
-input[type="text"] {
-    width: 100%;
-    max-width: 100%;
-}
-
-input[type="submit"] {
-    max-width: 100%;
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--light-paragraph-color)
 }
 
 @media (max-width: 768px) {
