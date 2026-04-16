@@ -64,6 +64,35 @@ header nav a:hover {
     transform: scale(1.01);
 }
 
+.hamburger-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--paragraph-color);
+    border-radius: 4px;
+    background: var(--background-color);
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-button svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--paragraph-color);
+    transition: transform 0.25s ease;
+}
+
+.hamburger-button[aria-expanded="true"] svg {
+    transform: scale(0.92);
+}
+
+.hamburger-button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr;
