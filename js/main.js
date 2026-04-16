@@ -1,4 +1,5 @@
 import { setupHamburgerMenu } from "./hamburger.js";
+import { getLastFmData } from "./api.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,4 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setupHamburgerMenu(hamburgerButton, nav, tabletMediaQuery);
 
+    getLastFmData();
 });
