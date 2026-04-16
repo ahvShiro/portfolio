@@ -90,6 +90,23 @@ section {
     display: block;
 }
 
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.job-title {
+    padding-right: 1.5em;
+}
+
+.date {
+    color: var(--accent-color);
+}
+
 .timeline {
     --x-linha: 12px; 
     --largura-linha: 2px;
@@ -149,7 +166,7 @@ section {
 .timeline-card {
     background: #fff;
     border: 1px solid #aaa;
-    padding: 1.25rem;
+    padding: 1rem;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
     border-color: transparent;
 }
@@ -184,6 +201,16 @@ section {
     100% {
         transform: translateX(-100%);
     }
+}
+
+
+.text-inline-color-change {
+    color: var(--accent-color);
+}
+
+.role {
+    font-size: 18px;
+    color: var(--light-paragraph-color);
 }
 
 #contact-methods {
