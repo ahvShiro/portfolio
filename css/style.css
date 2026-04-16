@@ -53,7 +53,14 @@ header nav {
 }
 
 header nav a {
-    color: var(--paragraph-color)
+    color: var(--paragraph-color);
+    transition: all 0.25s;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+    font-weight: bold;
+    transform: scale(1.01);
 }
 
 main {
