@@ -93,7 +93,11 @@ section {
 
 .hero-info {
     justify-content: flex-end;
-    padding-inline: clamp(12px, 4vw, 28px);
+}
+
+.hero-info p {
+    font-size: 15px;
+    margin-bottom: 16px;
 }
 
 .hero-photo img {
@@ -294,6 +298,7 @@ section {
 
 .text-inline-color-change {
     color: var(--accent-color);
+    font-size: 46px;
 }
 
 .role {
@@ -332,7 +337,6 @@ section {
 .contact-icon-list {
     display: flex;
     gap: 1rem;
-    padding-top: 0.25rem;
 }
 
 .contact-icon-list a {
@@ -421,6 +425,12 @@ section {
 
 }
 
+#certification {
+    padding-top: 1rem;
+}
+
+
+
 .footer {
     text-align: center;
     padding: 1.5rem;
@@ -441,12 +451,25 @@ section {
     }
 
     #home {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         min-height: auto;
     }
 
     #home div:last-child {
+        order: 1;
+    }
+
+    #contact-methods {
+        grid-template-columns: auto;
+        min-height: auto;
+    }
+
+    #contact-methods div:last-child  {
         order: -1;
+    }
+
+    .contact-form {
+        padding-top: 1rem;
     }
 
     main {
@@ -462,7 +485,7 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .cards-grid {
         grid-template-columns: 1fr;
     }
